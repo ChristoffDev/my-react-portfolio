@@ -5,14 +5,12 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Button from './components/ui/Button'
 import LinkButton from './components/ui/LinkButton'
+import Hero from './components/sections/Hero'
 
 function App() {
   return (
     <div>
-      <h1>Hi, I am Christopher.</h1>
-      
-      <Button text="View Projects" />
-      <LinkButton text="Contact Me" href="https://example.com/contact" />
+      <Hero />
     </div>
   );
 }

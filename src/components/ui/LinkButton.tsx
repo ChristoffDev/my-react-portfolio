@@ -1,12 +1,14 @@
+import type { ReactNode } from 'react';
+
 interface LinkButtonProps {
-    text: string;
+    children: ReactNode;
     href: string;
 }
 
-function LinkButton(props: LinkButtonProps) {
+function LinkButton({ children, href }: LinkButtonProps) {
     return (
-        <a href={props.href}>
-            {props.text}
+        <a href={href}>
+            {children}
         </a>
     );
 }
