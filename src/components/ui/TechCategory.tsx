@@ -8,7 +8,7 @@ interface TechCategoryProps {
 function TechCategory({ title, technologies }: TechCategoryProps){
     return(
         <div className="space-y-3">
-            <h3 className="font-bold">{title}</h3>
+            <h3 className="text-lg font-semibold text-foreground">{title}</h3>
             <div className="flex flex-wrap gap-4">
                 {technologies.map((tech) => (
                     <TechBadge key={tech} name={tech} />

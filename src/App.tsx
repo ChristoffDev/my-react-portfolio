@@ -9,6 +9,7 @@ import Hero from './components/sections/Hero'
 import Navbar from './components/layout/Navbar'
 import About from './components/sections/About'
 import TechStack from './components/sections/Techstack'
+import Projects from './components/sections/Projects'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Hero />
       <About />
       <TechStack />
+      <Projects />
     </div>
   );
 }

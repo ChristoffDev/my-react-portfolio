@@ -19,7 +19,7 @@ function TechStack() {
     ];
     return (
         <section id="tech" className="px-6 py-20">
-            <div className="mx-auto max-w-4xl space-y-4">
+            <div className="mx-auto max-w-4xl space-y-8">
                 
                 <h2 className="text-3xl font-bold">Tech Stack</h2>
 
