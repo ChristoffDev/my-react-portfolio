@@ -6,17 +6,24 @@ interface ProjectCardProps {
     description: string;
     technologies: string[];
     link: string;
+    image: string;
 }
 
 function ProjectCard({
     title,
     description,
     technologies,
-    link
+    link,
+    image,
 }: ProjectCardProps){
     return (
 
         <article className="border border-foreground/20 rounded-lg p-6 space-y-5">
+
+            <img src={image} alt={`${title} screenshot`}
+                className="w-full aspect-video object-cover rounded-md"
+            />
+
             <h3 className="text-xl font-semibold">{title}</h3>
 
             <p className="text-muted max-w-2xl">{description}</p>
@@ -28,6 +35,8 @@ function ProjectCard({
             </div>
 
             <LinkButton href={link} variant="secondary">View Project</LinkButton>
+
+            
 
         </article>
 

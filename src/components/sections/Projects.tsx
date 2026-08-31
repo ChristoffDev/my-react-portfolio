@@ -5,6 +5,7 @@ interface Project {
     description: string;
     technologies: string[];
     link: string;
+    image: string;
 }
 
 function Projects() {
@@ -15,12 +16,14 @@ function Projects() {
             description: "A personal portfolio built while learning React, TypeScript, and Tailwind CSS.",
             technologies: ["React", "TypeScript", "Tailwind CSS"],
             link: "#",
+            image: "/projects/portfolio.png",
         },
         {
             title: "Online Form Database Panel",
             description: "...",
             technologies: ["PHP", "..."],
             link: "#",
+            image: "/projects/forms.png",
         },
 
     ]
@@ -40,6 +43,7 @@ function Projects() {
                             description={project.description}
                             technologies={project.technologies}
                             link={project.link}
+                            image={project.image}
                         />
                         )
                     
