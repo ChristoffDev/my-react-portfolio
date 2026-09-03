@@ -18,7 +18,7 @@ function TechStack() {
         "WordPress",
     ];
     return (
-        <section id="tech" className="px-6 py-20">
+        <section id="stack" className="px-6 py-20">
             <div className="mx-auto max-w-4xl space-y-8">
                 
                 <h2 className="text-3xl font-bold">Tech Stack</h2>
