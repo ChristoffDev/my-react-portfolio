@@ -8,6 +8,7 @@ import Projects from "./components/sections/Projects";
 import Experience from "./components/sections/Experience";
 import Gallery from "./components/sections/Gallery";
 import Testimonials from "./components/sections/Testimonials";
+import Contact from "./components/sections/Contact";
 import ProjectCaseStudy from "./pages/ProjectCaseStudy";
 
 function ScrollToTop() {
@@ -60,6 +61,7 @@ function Home() {
                     <Testimonials />
                 </div>
             </div>
+            <Contact />
         </>
     );
 }

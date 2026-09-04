@@ -2,31 +2,31 @@ import profileImg from "../../assets/profile-img.png";
 
 function Hero() {
     return (
-        <section className="flex flex-col px-6 py-10 md:px-10 md:py-12 xl:min-h-[calc(100svh-5rem)]">
-            <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col">
+        <section className="flex h-[calc(100svh-5rem)] flex-col overflow-hidden px-6 py-6 md:px-10 md:py-8">
+            <div className="mx-auto flex h-full min-h-0 w-full max-w-6xl flex-col">
 
-                <div className="grid items-stretch gap-10 lg:grid-cols-[1fr_0.85fr] lg:gap-12 xl:gap-16">
+                <div className="grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] gap-6 lg:grid-cols-[1fr_0.85fr] lg:grid-rows-none lg:gap-12 xl:gap-16">
 
                     {/* Content */}
-                    <div className="flex flex-col gap-6">
+                    <div className="flex min-h-0 flex-col gap-4 md:gap-6">
 
                         <p className="text-sm font-medium tracking-[0.18em] text-muted">
                             LEAD DEVELOPER
                         </p>
 
                         <div>
-                            <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight md:text-7xl">
+                            <h1 className="text-4xl font-semibold leading-[0.95] tracking-tight sm:text-5xl md:text-7xl">
                                 Christopher
                                 <br />
                                 Perez
                             </h1>
 
-                            <p className="mt-4 text-xl text-muted">
+                            <p className="mt-3 text-lg text-muted md:mt-4 md:text-xl">
                                 Web Developer
                             </p>
                         </div>
 
-                        <p className="max-w-lg text-lg leading-relaxed text-muted">
+                        <p className="max-w-lg text-base leading-relaxed text-muted md:text-lg">
                             I build and support production web solutions, with experience in forms development, website implementation, WordPress, and technical troubleshooting.
                         </p>
 
@@ -55,18 +55,18 @@ function Hero() {
                     </div>
 
                     {/* Profile */}
-                    <div className="relative flex h-full justify-center lg:justify-end xl:h-auto xl:self-start">
+                    <div className="relative flex h-full min-h-0 min-w-0 items-end justify-center overflow-hidden lg:justify-end">
                         <img
                             src={profileImg}
                             alt="Christopher Perez, lead developer"
-                            className="mx-auto block max-h-80 w-auto max-w-full object-contain object-bottom saturate-[.48] brightness-[1.02] sm:max-h-96 lg:mx-0 lg:h-full lg:max-h-none xl:h-auto xl:max-h-[28rem]"
+                            className="mx-auto block h-full w-auto min-h-0 max-h-full max-w-full object-contain object-bottom saturate-[.48] brightness-[1.02] lg:mx-0"
                         />
                     </div>
 
                 </div>
 
                 {/* Contact / Availability */}
-                <div id="contact" className="mt-0 shrink-0 border-t border-foreground/10 pt-6">
+                <div className="shrink-0 border-t border-foreground/10 pt-4 md:pt-6">
                     <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
 
                         <p className="shrink-0 text-sm text-muted">
