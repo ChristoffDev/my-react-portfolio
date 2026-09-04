@@ -30,26 +30,44 @@ function Navbar() {
             return;
         }
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const visible = entries
-                    .filter((entry) => entry.isIntersecting)
-                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        const updateActive = () => {
+            const spyY = window.innerHeight * 0.28;
+            const hashId = location.hash.replace(/^#/, "");
 
-                if (visible[0]?.target.id) {
-                    setActiveId(visible[0].target.id);
-                }
-            },
-            {
-                rootMargin: "-20% 0px -55% 0px",
-                threshold: [0, 0.25, 0.5, 1],
-            },
-        );
+            const containing = sections
+                .map((el) => {
+                    const rect = el.getBoundingClientRect();
+                    return { id: el.id, top: rect.top, bottom: rect.bottom };
+                })
+                .filter((section) => section.top <= spyY && section.bottom > spyY);
 
-        sections.forEach((section) => observer.observe(section));
+            if (containing.length === 0) {
+                return;
+            }
 
-        return () => observer.disconnect();
-    }, [location.pathname]);
+            if (containing.some((section) => section.id === hashId)) {
+                setActiveId(hashId);
+                return;
+            }
+
+            const firstInNav = [...containing].sort(
+                (a, b) =>
+                    NAV_LINKS.findIndex((link) => link.id === a.id) -
+                    NAV_LINKS.findIndex((link) => link.id === b.id),
+            )[0];
+
+            setActiveId(firstInNav.id);
+        };
+
+        updateActive();
+        window.addEventListener("scroll", updateActive, { passive: true });
+        window.addEventListener("resize", updateActive);
+
+        return () => {
+            window.removeEventListener("scroll", updateActive);
+            window.removeEventListener("resize", updateActive);
+        };
+    }, [location.pathname, location.hash]);
 
     useEffect(() => {
         if (!menuOpen) {
@@ -94,7 +112,10 @@ function Navbar() {
                                     : "text-muted hover:text-foreground")
                             }
                             aria-current={isActive ? "page" : undefined}
-                            onClick={onNavigate}
+                            onClick={() => {
+                                setActiveId(link.id);
+                                onNavigate?.();
+                            }}
                         >
                             {link.label}
                         </a>

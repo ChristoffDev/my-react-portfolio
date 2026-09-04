@@ -9,6 +9,7 @@ import Experience from "./components/sections/Experience";
 import Gallery from "./components/sections/Gallery";
 import Testimonials from "./components/sections/Testimonials";
 import Contact from "./components/sections/Contact";
+import Footer from "./components/layout/Footer";
 import ProjectCaseStudy from "./pages/ProjectCaseStudy";
 
 function ScrollToTop() {
@@ -27,6 +28,7 @@ function Layout() {
             <ScrollToTop />
             <Navbar />
             <Outlet />
+            <Footer />
         </div>
     );
 }
