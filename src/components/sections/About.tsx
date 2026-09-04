@@ -1,26 +1,40 @@
-
-
-
 function About() {
     return (
-        <section id="about" className="px-6 py-20">
-            <div className="mx-auto max-w-4xl space-y-6">
+        <section id="about" className="px-6 py-20 md:px-10 md:py-24">
+            <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
 
-                <h2 className="text-3xl font-bold">About Me</h2>
+                <div className="flex flex-col gap-6">
+                    <h2 className="text-sm font-medium tracking-[0.18em] text-muted">
+                        01 / ABOUT
+                    </h2>
 
-                <div className="space-y-4 max-w-2xl">
-                    <p className="text-muted">
-                       I work as a Lead Developer, with experience in forms development, website implementation, WordPress, and production support. I currently lead a team of 12 developers while continuing to work hands-on with implementation, troubleshooting, and improving existing systems.
+                    <p className="font-serif text-3xl leading-snug tracking-tight md:text-4xl">
+                        Keep production stable. Then make it better.
                     </p>
-                    <p className="text-muted">
-                        I enjoy working through complex problems and turning requirements and ideas into working solutions. My experience has taught me to adapt to different projects, technologies, and existing codebases while keeping production stability in mind. I'm also continuously learning new technologies, currently focusing on React and modern web development through personal projects.
+                </div>
+
+                <div className="flex flex-col gap-6">
+                    <p className="text-lg leading-relaxed text-muted">
+                        I stay hands-on while leading, working on implementation,
+                        troubleshooting, and improving systems already in production.
+                        Stability comes first.
+                    </p>
+
+                    <p className="text-lg leading-relaxed text-muted">
+                        I am comfortable working in existing codebases, understanding
+                        how systems fit together, and turning requirements into solutions
+                        that ship. I am also learning React and modern front-end
+                        development through personal work.
+                    </p>
+
+                   <p className="pt-2 font-mono text-xs text-muted">
+                        LEADERSHIP · FORMS DEVELOPMENT · PRODUCTION SUPPORT · SYSTEM IMPROVEMENT · WEB DEVELOPMENT
                     </p>
                 </div>
 
             </div>
-
         </section>
-    )
-};
+    );
+}
 
 export default About;

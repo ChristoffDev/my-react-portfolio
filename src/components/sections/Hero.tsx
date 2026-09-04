@@ -2,10 +2,10 @@ import profileImg from "../../assets/profile-img.png";
 
 function Hero() {
     return (
-        <section className="flex min-h-[calc(100svh-5rem)] flex-col px-6 py-10 md:px-10 md:py-12">
+        <section className="flex flex-col px-6 py-10 md:px-10 md:py-12 xl:min-h-[calc(100svh-5rem)]">
             <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col">
 
-                <div className="grid min-h-0 flex-1 items-center gap-10 md:grid-cols-[1fr_0.9fr] lg:gap-16">
+                <div className="grid items-stretch gap-10 lg:grid-cols-[1fr_0.85fr] lg:gap-12 xl:gap-16">
 
                     {/* Content */}
                     <div className="flex flex-col gap-6">
@@ -27,9 +27,7 @@ function Hero() {
                         </div>
 
                         <p className="max-w-lg text-lg leading-relaxed text-muted">
-                            I build and support production web solutions, with experience
-                            in forms development, website implementation, WordPress, and
-                            production support.
+                            I build and support production web solutions, with experience in forms development, website implementation, WordPress, and technical troubleshooting.
                         </p>
 
                         <div className="flex flex-wrap items-center gap-5">
@@ -57,30 +55,32 @@ function Hero() {
                     </div>
 
                     {/* Profile */}
-                    <div className="relative h-full min-h-0">
+                    <div className="relative flex h-full justify-center lg:justify-end xl:h-auto xl:self-start">
                         <img
                             src={profileImg}
                             alt="Christopher Perez, lead developer"
-                            className="h-full max-h-full w-full object-contain object-bottom saturate-[.48] brightness-[1.02]"
+                            className="mx-auto block max-h-80 w-auto max-w-full object-contain object-bottom saturate-[.48] brightness-[1.02] sm:max-h-96 lg:mx-0 lg:h-full lg:max-h-none xl:h-auto xl:max-h-[28rem]"
                         />
                     </div>
 
                 </div>
 
                 {/* Contact / Availability */}
-                <div id="contact" className="mt-auto shrink-0 border-t border-foreground/10 pt-6">
-                    <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+                <div id="contact" className="mt-0 shrink-0 border-t border-foreground/10 pt-6">
+                    <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
 
-                        <p className="text-sm text-muted">
+                        <p className="shrink-0 text-sm text-muted">
                             Open to new opportunities
                         </p>
 
-                        <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+                        <div className="flex flex-nowrap gap-x-5 text-sm">
                             <a
                                 href="mailto:christopherperez.dev@gmail.com"
                                 className="text-muted transition-colors hover:text-foreground"
+                                aria-label="christopherperez.dev@gmail.com"
                             >
-                                christopherperez.dev@gmail.com
+                                <span className="md:hidden">Email</span>
+                                <span className="hidden md:inline">christopherperez.dev@gmail.com</span>
                             </a>
 
                             <a
