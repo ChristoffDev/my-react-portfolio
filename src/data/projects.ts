@@ -8,6 +8,7 @@ import fdpDeveloperLogin from "../assets/projects/forms-datapoint/fdp-developer-
 import fdpStandaloneLogin from "../assets/projects/forms-datapoint/fdp-standalone-login.png";
 import fdpSubmissionViewer from "../assets/projects/forms-datapoint/fdp-submission-viewer.png";
 import fdpArchitecture from "../assets/projects/forms-datapoint/fdp-architecture.png";
+import portfolioHome from "../assets/projects/react-portfolio/home-portfolio.png";
 
 export interface ProjectImage {
     src: string;
@@ -155,7 +156,7 @@ export const PROJECTS: Project[] = [
         technologies: ["React", "TypeScript", "Tailwind CSS"],
         stack: ["React", "TypeScript", "Tailwind CSS"],
         tools: ["Cursor AI"],
-        link: "https://github.com/ChristoffDev",
+        link: "https://github.com/ChristoffDev/my-react-portfolio",
         context:
             "A personal site for presenting background, tools, and selected work, and for practicing component-based front-end development.",
         overview:
@@ -173,7 +174,12 @@ export const PROJECTS: Project[] = [
         notes: [
             "I used Cursor AI as a development assistant to move faster on layout, routing, and copy structure. I remained responsible for the design decisions, the implementation, and how the site reads as a whole.",
         ],
-        images: [],
+        images: [
+            {
+                src: portfolioHome,
+                alt: "Home page of the React portfolio",
+            },
+        ],
     },
     {
         slug: "bohol-maranatha-christian-academy-portal",
