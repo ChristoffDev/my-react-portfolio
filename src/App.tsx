@@ -5,6 +5,9 @@ import Navbar from "./components/layout/Navbar";
 import About from "./components/sections/About";
 import TechStack from "./components/sections/Techstack";
 import Projects from "./components/sections/Projects";
+import Experience from "./components/sections/Experience";
+import Gallery from "./components/sections/Gallery";
+import Testimonials from "./components/sections/Testimonials";
 import ProjectCaseStudy from "./pages/ProjectCaseStudy";
 
 function ScrollToTop() {
@@ -48,6 +51,13 @@ function Home() {
                 <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.9fr_1.15fr] lg:items-start">
                     <TechStack />
                     <Projects />
+                </div>
+            </div>
+            <Experience />
+            <div className="px-6 py-20 md:px-10 md:py-24">
+                <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.9fr_1.15fr] lg:items-start">
+                    <Gallery />
+                    <Testimonials />
                 </div>
             </div>
         </>

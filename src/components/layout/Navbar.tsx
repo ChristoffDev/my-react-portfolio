@@ -6,6 +6,7 @@ const NAV_LINKS = [
     { href: "/#about", label: "About", id: "about" },
     { href: "/#stack", label: "Tech Stack", id: "stack" },
     { href: "/#projects", label: "Project", id: "projects" },
+    { href: "/#experience", label: "Experience", id: "experience" },
     { href: "/#contact", label: "Contact", id: "contact" },
 ] as const;
 
