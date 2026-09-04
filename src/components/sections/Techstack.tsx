@@ -66,15 +66,18 @@ function TechStack() {
                     02 / TECH STACK
                 </h2>
 
-                <div className="mt-8 space-y-8">
+                <div className="mt-12 border-b border-border">
                     {GROUPS.map((group) => (
-                        <div key={group.title}>
+                        <div
+                            key={group.title}
+                            className="grid gap-4 border-t border-border py-6 md:grid-cols-[12rem_1fr] md:gap-8 md:py-8"
+                        >
                             <h3 className="text-xs font-medium tracking-[0.16em] text-light-ink">
                                 {group.title.toUpperCase()}
                             </h3>
-                            <ul className="mt-4 space-y-4">
+                            <ul className="flex flex-wrap gap-x-8 gap-y-5">
                                 {group.items.map((item) => (
-                                    <li key={item.name} className="flex items-start gap-3">
+                                    <li key={item.name} className="flex min-w-[10rem] items-start gap-3">
                                         <TechIcon name={item.name} />
                                         <div>
                                             <p className="text-sm font-medium tracking-[0.12em]">
