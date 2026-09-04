@@ -12,7 +12,7 @@ function Footer() {
                     className="text-sm text-muted transition-colors hover:text-foreground"
                     onClick={() => window.scrollTo({ top: 0 })}
                 >
-                    Back to top →
+                    Back to top ↑
                 </button>
             </div>
         </footer>
