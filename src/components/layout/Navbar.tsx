@@ -1,19 +1,26 @@
 import { useEffect, useId, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../brand/Logo";
 
 const NAV_LINKS = [
-    { href: "#about", label: "About", id: "about" },
-    { href: "#stack", label: "Tech Stack", id: "stack" },
-    { href: "#projects", label: "Project", id: "projects" },
-    { href: "#contact", label: "Contact", id: "contact" },
+    { href: "/#about", label: "About", id: "about" },
+    { href: "/#stack", label: "Tech Stack", id: "stack" },
+    { href: "/#projects", label: "Project", id: "projects" },
+    { href: "/#contact", label: "Contact", id: "contact" },
 ] as const;
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeId, setActiveId] = useState("");
     const menuId = useId();
+    const location = useLocation();
 
     useEffect(() => {
+        if (location.pathname !== "/") {
+            setActiveId("");
+            return;
+        }
+
         const sections = NAV_LINKS
             .map((link) => document.getElementById(link.id))
             .filter((el): el is HTMLElement => el !== null);
@@ -41,7 +48,7 @@ function Navbar() {
         sections.forEach((section) => observer.observe(section));
 
         return () => observer.disconnect();
-    }, []);
+    }, [location.pathname]);
 
     useEffect(() => {
         if (!menuOpen) {
@@ -100,9 +107,9 @@ function Navbar() {
         <header className="sticky top-0 z-50 border-b border-border bg-background">
             <nav className="mx-auto max-w-6xl px-6 py-5 md:px-10" aria-label="Primary">
                 <div className="flex items-center justify-between">
-                    <a href="#" className="text-foreground" aria-label="Christopher Perez">
+                    <Link to="/" className="text-foreground" aria-label="Christopher Perez">
                         <Logo />
-                    </a>
+                    </Link>
 
                     {renderLinks(undefined, "hidden items-center gap-8 md:flex")}
 

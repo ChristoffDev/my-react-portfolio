@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="1520" viewBox="0 0 1600 1520" role="img" aria-labelledby="title desc">
+  <title id="title">Forms DataPoint - Multi-Tenant to Standalone Architecture</title>
+  <desc id="desc">Architecture transformation of an existing production application from a multi-tenant platform to standalone per-site deployment.</desc>
+
+  <defs>
+    <style type="text/css"><![CDATA[
+      .title { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #1f2937; }
+      .subtitle { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 16px; fill: #6b7280; }
+      .banner-label { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #1d4ed8; letter-spacing: 0.06em; }
+      .banner-text { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 15px; fill: #374151; }
+      .col-title { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 700; }
+      .col-sub { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; }
+      .summary-title { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 700; fill: #111827; }
+      .summary-text { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 13px; fill: #4b5563; }
+      .card-title { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #111827; }
+      .card-text { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 12px; fill: #4b5563; }
+      .chip { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; }
+      .note-title { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 700; }
+      .note-text { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 11px; fill: #4b5563; }
+      .result-title { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #111827; }
+      .result-text { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 11px; fill: #4b5563; }
+      .outcome-title { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #065f46; }
+      .outcome-text { font-family: Segoe UI, Helvetica, Arial, sans-serif; font-size: 12px; fill: #374151; }
+    ]]></style>
+
+    <g id="icon-globe">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <ellipse cx="12" cy="12" rx="4" ry="9" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M3 12h18M4.5 7.5h15M4.5 16.5h15" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </g>
+    <g id="icon-form">
+      <rect x="4" y="3" width="16" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8 8h8M8 12h8M8 16h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+    <g id="icon-server">
+      <rect x="3" y="4" width="18" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="3" y="14" width="18" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="7" cy="7" r="1" fill="currentColor"/>
+      <circle cx="7" cy="17" r="1" fill="currentColor"/>
+    </g>
+    <g id="icon-db">
+      <ellipse cx="12" cy="6" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </g>
+    <g id="icon-keys">
+      <circle cx="8" cy="10" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M11 10h9l-2 2 2 2h-3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="icon-install">
+      <rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M9 9h6M9 13h6M9 17h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="16.5" cy="6.5" r="3.2" fill="#ecfdf5" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M15.3 6.5l.9.9 1.7-1.8" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="icon-app">
+      <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M3 9h18" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="6.5" cy="7" r="0.8" fill="currentColor"/>
+      <circle cx="9" cy="7" r="0.8" fill="currentColor"/>
+    </g>
+    <g id="icon-user">
+      <circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M5 19c0-3.1 3.1-5.5 7-5.5s7 2.4 7 5.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </g>
+    <g id="icon-dev">
+      <circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M5 19c0-3.1 3.1-5.5 7-5.5s7 2.4 7 5.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <path d="M18 4l1.2 1.2L16.5 8 15.3 6.8 18 4z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+    </g>
+    <g id="icon-folder">
+      <path d="M3 8.5A1.5 1.5 0 0 1 4.5 7H9l2 2h8.5A1.5 1.5 0 0 1 21 10.5v7A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5v-9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </g>
+    <g id="icon-check">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8 12.2l2.4 2.4L16.2 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="icon-unlink">
+      <path d="M9 13.5l-1.2 1.2a3.2 3.2 0 0 1-4.5-4.5L5.5 8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <path d="M15 10.5l1.2-1.2a3.2 3.2 0 1 1 4.5 4.5L18.5 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <path d="M9 9l6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </g>
+    <g id="icon-lock">
+      <rect x="6" y="11" width="12" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8.5 11V8.5a3.5 3.5 0 0 1 7 0V11" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </g>
+    <g id="icon-host">
+      <rect x="4" y="4" width="16" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8 20h8M12 16v4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </g>
+    <g id="icon-attach">
+      <path d="M15.5 8.5l-6.2 6.2a2.4 2.4 0 0 1-3.4-3.4l7.1-7.1a3.8 3.8 0 0 1 5.4 5.4l-7.4 7.4a5.2 5.2 0 0 1-7.4-7.4l6.5-6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </g>
+    <g id="icon-alert">
+      <path d="M12 4l9 16H3L12 4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+      <path d="M12 10v4M12 16.5h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1520" fill="#ffffff"/>
+
+  <text x="800" y="42" text-anchor="middle" class="title">Forms DataPoint</text>
+  <text x="800" y="74" text-anchor="middle" class="title" style="font-size:26px;font-weight:600;fill:#374151;">Multi-Tenant &#8594; Standalone Architecture</text>
+  <text x="800" y="98" text-anchor="middle" class="subtitle" style="font-size:12px;font-weight:600;fill:#6b7280;letter-spacing:0.04em;">PROFESSIONAL PROJECT</text>
+  <text x="800" y="118" text-anchor="middle" class="subtitle" style="font-size:13px;">Modernization of an existing Laravel + Vue production application</text>
+
+  <rect x="60" y="136" width="1480" height="64" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="88" y="162" class="banner-label">PROJECT GOAL</text>
+  <text x="88" y="185" class="banner-text">Convert an existing multi-tenant forms platform into a standalone deployment package for individual client websites.</text>
+
+  <!-- BEFORE -->
+  <rect x="60" y="224" width="720" height="920" rx="18" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <rect x="60" y="224" width="720" height="78" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <rect x="60" y="280" width="720" height="22" fill="#eff6ff"/>
+  <line x1="60" y1="302" x2="780" y2="302" stroke="#93c5fd" stroke-width="1.5"/>
+
+  <text x="420" y="258" text-anchor="middle" class="col-title" fill="#1d4ed8">BEFORE</text>
+  <text x="420" y="286" text-anchor="middle" class="col-sub" fill="#3b82f6">Multi-Tenant Platform</text>
+
+  <rect x="92" y="324" width="656" height="78" rx="12" fill="#f8fbff" stroke="#bfdbfe" stroke-width="1.4"/>
+  <g transform="translate(118 344)" style="color:#2563eb"><use xlink:href="#icon-globe"/></g>
+  <text x="164" y="358" class="summary-title">Multiple Websites  |  Shared Platform</text>
+  <text x="164" y="380" class="summary-text">One application serving multiple client websites.</text>
+
+  <rect x="170" y="430" width="440" height="70" rx="12" fill="#ffffff" stroke="#60a5fa" stroke-width="1.8"/>
+  <g transform="translate(190 448)" style="color:#2563eb"><use xlink:href="#icon-globe"/></g>
+  <text x="236" y="460" class="card-title">Multiple Client Websites</text>
+  <text x="236" y="482" class="card-text">Shared access to one central platform</text>
+  <line x1="390" y1="500" x2="390" y2="528" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <rect x="170" y="530" width="440" height="78" rx="12" fill="#ffffff" stroke="#60a5fa" stroke-width="1.8"/>
+  <g transform="translate(190 550)" style="color:#2563eb"><use xlink:href="#icon-form"/></g>
+  <text x="236" y="560" class="card-title">Form Submission</text>
+  <text x="236" y="582" class="card-text">Tenant validation required before storage</text>
+  <line x1="390" y1="608" x2="390" y2="636" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <rect x="170" y="638" width="440" height="92" rx="12" fill="#ffffff" stroke="#60a5fa" stroke-width="1.8"/>
+  <g transform="translate(190 660)" style="color:#2563eb"><use xlink:href="#icon-server"/></g>
+  <text x="236" y="668" class="card-title">Central Application</text>
+  <text x="236" y="690" class="card-text">Shared Laravel API</text>
+  <text x="236" y="710" class="card-text">Shared Vue Panel</text>
+  <line x1="390" y1="730" x2="390" y2="758" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <rect x="170" y="760" width="440" height="108" rx="12" fill="#ffffff" stroke="#60a5fa" stroke-width="1.8"/>
+  <g transform="translate(190 786)" style="color:#2563eb"><use xlink:href="#icon-db"/></g>
+  <text x="236" y="788" class="card-title">Shared Database</text>
+  <text x="236" y="812" class="chip" fill="#1d4ed8">Submissions</text>
+  <text x="330" y="812" class="chip" fill="#1d4ed8">Users</text>
+  <text x="388" y="812" class="chip" fill="#1d4ed8">Logs</text>
+  <text x="236" y="836" class="chip" fill="#1d4ed8">Attachments</text>
+
+  <rect x="92" y="900" width="656" height="88" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <g transform="translate(118 924)" style="color:#2563eb"><use xlink:href="#icon-keys"/></g>
+  <text x="164" y="930" class="note-title" fill="#1d4ed8">Shared Management</text>
+  <text x="164" y="952" class="note-text">Tenant Accounts  |  API Keys  |  Central Administration</text>
+  <text x="164" y="972" class="note-text">Centralized control across all client websites</text>
+
+  <rect x="92" y="1008" width="656" height="108" rx="12" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+  <g transform="translate(118 1034)" style="color:#c2410c"><use xlink:href="#icon-alert"/></g>
+  <text x="164" y="1040" class="note-title" fill="#c2410c">Why the Change Was Needed</text>
+  <text x="164" y="1064" class="note-text">Complex deployment across shared infrastructure</text>
+  <text x="164" y="1084" class="note-text">Tenant management overhead</text>
+  <text x="164" y="1104" class="note-text">Shared administration for every client site</text>
+
+  <!-- AFTER -->
+  <rect x="820" y="224" width="720" height="920" rx="18" fill="#ffffff" stroke="#6ee7b7" stroke-width="2"/>
+  <rect x="820" y="224" width="720" height="78" rx="18" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="2"/>
+  <rect x="820" y="280" width="720" height="22" fill="#ecfdf5"/>
+  <line x1="820" y1="302" x2="1540" y2="302" stroke="#6ee7b7" stroke-width="1.5"/>
+
+  <text x="1180" y="258" text-anchor="middle" class="col-title" fill="#047857">AFTER</text>
+  <text x="1180" y="286" text-anchor="middle" class="col-sub" fill="#059669">Standalone Deployment</text>
+
+  <rect x="852" y="324" width="656" height="78" rx="12" fill="#f0fdf8" stroke="#a7f3d0" stroke-width="1.4"/>
+  <g transform="translate(878 344)" style="color:#059669"><use xlink:href="#icon-host"/></g>
+  <text x="924" y="358" class="summary-title">One Website  |  One Installation</text>
+  <text x="924" y="380" class="summary-text">Each client receives an independent deployment.</text>
+
+  <rect x="930" y="426" width="440" height="58" rx="12" fill="#ffffff" stroke="#34d399" stroke-width="1.8"/>
+  <g transform="translate(950 440)" style="color:#059669"><use xlink:href="#icon-globe"/></g>
+  <text x="994" y="458" class="card-title">Client Website</text>
+  <line x1="1150" y1="484" x2="1150" y2="506" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <rect x="930" y="508" width="440" height="78" rx="12" fill="#ffffff" stroke="#34d399" stroke-width="1.8"/>
+  <g transform="translate(950 528)" style="color:#059669"><use xlink:href="#icon-install"/></g>
+  <text x="994" y="538" class="card-title">Browser Installer</text>
+  <text x="994" y="560" class="card-text">Automatically configures installation</text>
+  <text x="994" y="578" class="card-text">Reads WordPress configuration</text>
+  <line x1="1150" y1="586" x2="1150" y2="608" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <rect x="930" y="610" width="440" height="72" rx="12" fill="#ffffff" stroke="#34d399" stroke-width="1.8"/>
+  <g transform="translate(950 628)" style="color:#059669"><use xlink:href="#icon-app"/></g>
+  <text x="994" y="638" class="card-title">Standalone Forms Platform</text>
+  <text x="994" y="660" class="card-text">Laravel API  |  Vue SPA</text>
+  <line x1="1150" y1="682" x2="1150" y2="700" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <rect x="930" y="702" width="210" height="72" rx="12" fill="#ffffff" stroke="#34d399" stroke-width="1.8"/>
+  <g transform="translate(946 720)" style="color:#059669"><use xlink:href="#icon-user"/></g>
+  <text x="986" y="732" class="card-title">Client Login</text>
+  <text x="986" y="752" class="card-text">Live submissions</text>
+
+  <rect x="1160" y="702" width="210" height="72" rx="12" fill="#ffffff" stroke="#34d399" stroke-width="1.8"/>
+  <g transform="translate(1176 720)" style="color:#059669"><use xlink:href="#icon-dev"/></g>
+  <text x="1216" y="732" class="card-title">Developer Login</text>
+  <text x="1216" y="752" class="card-text">Testing</text>
+
+  <line x1="1150" y1="774" x2="1150" y2="796" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <rect x="930" y="798" width="440" height="92" rx="12" fill="#ffffff" stroke="#34d399" stroke-width="1.8"/>
+  <g transform="translate(950 820)" style="color:#059669"><use xlink:href="#icon-db"/></g>
+  <text x="994" y="824" class="card-title">Standalone Database</text>
+  <text x="994" y="848" class="chip" fill="#047857">Submissions</text>
+  <text x="1090" y="848" class="chip" fill="#047857">Users</text>
+  <text x="1148" y="848" class="chip" fill="#047857">Logs</text>
+  <text x="994" y="870" class="chip" fill="#047857">Attachments</text>
+  <line x1="1150" y1="890" x2="1150" y2="912" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <rect x="930" y="914" width="440" height="70" rx="12" fill="#ffffff" stroke="#34d399" stroke-width="1.8"/>
+  <g transform="translate(950 932)" style="color:#059669"><use xlink:href="#icon-folder"/></g>
+  <text x="994" y="944" class="card-title">Local Attachments</text>
+  <text x="994" y="966" class="card-text">Secure local storage</text>
+
+  <rect x="852" y="1008" width="656" height="108" rx="12" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.6"/>
+  <g transform="translate(878 1036)" style="color:#059669"><use xlink:href="#icon-check"/></g>
+  <text x="924" y="1048" class="outcome-title">Outcome</text>
+  <text x="924" y="1074" class="outcome-text">Converted the platform into independently deployable</text>
+  <text x="924" y="1094" class="outcome-text">installations, simplifying deployment, authentication,</text>
+  <text x="924" y="1114" class="outcome-text">and long-term maintenance.</text>
+
+  <!-- RESULT -->
+  <rect x="60" y="1170" width="1480" height="300" rx="18" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.6"/>
+
+  <circle cx="120" cy="1235" r="28" fill="#0f766e"/>
+  <path d="M108 1235l8 8 16-16" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="168" y="1230" class="col-title" fill="#115e59" style="font-size:20px;">RESULT</text>
+  <text x="168" y="1254" class="subtitle" style="font-size:13px;">What the architecture change delivered</text>
+
+  <rect x="88" y="1288" width="268" height="148" rx="14" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.6"/>
+  <circle cx="128" cy="1328" r="22" fill="#ecfdf5"/>
+  <g transform="translate(116 1316)" style="color:#059669"><use xlink:href="#icon-host"/></g>
+  <text x="108" y="1374" class="result-title">Independent Deployment</text>
+  <text x="108" y="1396" class="result-text">One installation per</text>
+  <text x="108" y="1414" class="result-text">client website.</text>
+
+  <rect x="372" y="1288" width="268" height="148" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.6"/>
+  <circle cx="412" cy="1328" r="22" fill="#eff6ff"/>
+  <g transform="translate(400 1316)" style="color:#2563eb"><use xlink:href="#icon-unlink"/></g>
+  <text x="392" y="1374" class="result-title">No Multi-Tenant Dependencies</text>
+  <text x="392" y="1396" class="result-text">Tenant management</text>
+  <text x="392" y="1414" class="result-text">removed.</text>
+
+  <rect x="656" y="1288" width="268" height="148" rx="14" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.6"/>
+  <circle cx="696" cy="1328" r="22" fill="#ecfdf5"/>
+  <g transform="translate(684 1316)" style="color:#059669"><use xlink:href="#icon-lock"/></g>
+  <text x="676" y="1374" class="result-title">Simplified Authentication</text>
+  <text x="676" y="1396" class="result-text">Cleaner login</text>
+  <text x="676" y="1414" class="result-text">workflow.</text>
+
+  <rect x="940" y="1288" width="268" height="148" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="1.6"/>
+  <circle cx="980" cy="1328" r="22" fill="#eff6ff"/>
+  <g transform="translate(968 1316)" style="color:#2563eb"><use xlink:href="#icon-install"/></g>
+  <text x="960" y="1374" class="result-title">Shared Hosting Ready</text>
+  <text x="960" y="1396" class="result-text">FTP deployment and</text>
+  <text x="960" y="1414" class="result-text">browser installer.</text>
+
+  <rect x="1224" y="1288" width="280" height="148" rx="14" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.6"/>
+  <circle cx="1264" cy="1328" r="22" fill="#ecfdf5"/>
+  <g transform="translate(1252 1316)" style="color:#059669"><use xlink:href="#icon-attach"/></g>
+  <text x="1244" y="1374" class="result-title">Local Attachment Storage</text>
+  <text x="1244" y="1396" class="result-text">Secure local storage</text>
+  <text x="1244" y="1414" class="result-text">and downloads.</text>
+</svg>
