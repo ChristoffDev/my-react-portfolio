@@ -6,12 +6,12 @@ function Contact() {
         >
             <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
                 <div className="flex flex-col gap-6">
-                    <h2 className="text-sm font-medium tracking-[0.18em] text-muted">
+                    <p className="text-sm font-medium tracking-[0.18em] text-muted">
                         06 / CONTACT
-                    </h2>
-                    <p className="font-serif text-3xl leading-snug tracking-tight md:text-4xl">
-                        Let's work together.
                     </p>
+                    <h2 className="font-serif text-3xl leading-snug tracking-tight md:text-4xl">
+                        Let's work together.
+                    </h2>
                     <p className="max-w-2xl text-lg leading-relaxed text-muted">
                         I'm open to opportunities where I can contribute my
                         experience in web development, production support,

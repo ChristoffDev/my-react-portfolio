@@ -51,11 +51,15 @@ function Screenshot({ src, alt }: ProjectImage) {
                 type="button"
                 onClick={open}
                 aria-haspopup="dialog"
+                aria-label={`View full image: ${alt}`}
+                data-cursor="view"
                 className="block w-full overflow-hidden border border-border text-left"
             >
                 <img
                     src={src}
                     alt={alt}
+                    loading="lazy"
+                    decoding="async"
                     className="aspect-[4/3] w-full object-cover object-top"
                 />
             </button>
@@ -83,6 +87,8 @@ function Screenshot({ src, alt }: ProjectImage) {
                     <img
                         src={src}
                         alt={alt}
+                        loading="lazy"
+                        decoding="async"
                         className="max-h-[90svh] max-w-[90vw] object-contain"
                         onClick={(event) => event.stopPropagation()}
                     />
@@ -115,7 +121,7 @@ function ProjectCaseStudy() {
 
     if (!project) {
         return (
-            <main className="px-6 py-20 md:px-10 md:py-24">
+            <main id="main" className="px-6 py-20 md:px-10 md:py-24">
                 <div className="mx-auto max-w-6xl">
                     <p className="text-sm text-muted">This project could not be found.</p>
                     <BackLink className="mt-6 inline-block" />
@@ -128,7 +134,7 @@ function ProjectCaseStudy() {
     const label = `${String(number).padStart(2, "0")} / CASE STUDY`;
 
     return (
-        <main className="px-6 py-20 md:px-10 md:py-24">
+        <main id="main" className="px-6 py-20 md:px-10 md:py-24">
             <article className="mx-auto max-w-6xl">
                 <BackLink />
 

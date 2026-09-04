@@ -10,6 +10,7 @@ import Gallery from "./components/sections/Gallery";
 import Testimonials from "./components/sections/Testimonials";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/layout/Footer";
+import InkCursor from "./components/effects/InkCursor";
 import ProjectCaseStudy from "./pages/ProjectCaseStudy";
 
 const HOME_TITLE = "Christopher Perez — Lead Developer";
@@ -27,10 +28,17 @@ function ScrollToTop() {
 function Layout() {
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <a
+                href="#main"
+                className="sr-only focus:not-sr-only focus:absolute focus:left-6 focus:top-4 focus:z-[60] focus:bg-background focus:px-4 focus:py-2 focus:text-sm focus:text-foreground"
+            >
+                Skip to content
+            </a>
             <ScrollToTop />
             <Navbar />
             <Outlet />
             <Footer />
+            <InkCursor />
         </div>
     );
 }
@@ -53,7 +61,7 @@ function Home() {
     }, [hash]);
 
     return (
-        <>
+        <main id="main">
             <Hero />
             <About />
             <TechStack />
@@ -71,7 +79,7 @@ function Home() {
                 </div>
             </div>
             <Contact />
-        </>
+        </main>
     );
 }
 
@@ -81,7 +89,7 @@ function NotFound() {
     }, []);
 
     return (
-        <main className="px-6 py-20 md:px-10 md:py-24">
+        <main id="main" className="px-6 py-20 md:px-10 md:py-24">
             <div className="mx-auto max-w-6xl">
                 <p className="text-sm text-muted">This page could not be found.</p>
                 <Link

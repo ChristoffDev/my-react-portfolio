@@ -26,11 +26,17 @@ function Projects() {
                     key={index}
                     className="mt-8 grid gap-10 motion-safe:animate-[fade-in_200ms_ease-out] motion-reduce:animate-none lg:grid-cols-2 lg:items-start"
                 >
-                    <div className="overflow-hidden border border-border">
+                    <Link
+                        to={`/projects/${project.slug}`}
+                        data-cursor="view"
+                        className="overflow-hidden border border-border"
+                    >
                         {project.images[0] ? (
                             <img
                                 src={project.images[0].src}
                                 alt={project.images[0].alt}
+                                loading="lazy"
+                                decoding="async"
                                 className="aspect-[4/3] w-full object-cover object-top grayscale"
                             />
                         ) : (
@@ -40,10 +46,10 @@ function Projects() {
                                 </p>
                             </div>
                         )}
-                    </div>
+                    </Link>
 
                     <div>
-                        <h3 className="text-2xl font-semibold tracking-tight">
+                        <h3 className="text-2xl font-semibold tracking-tight" aria-live="polite">
                             {project.title}
                         </h3>
 

@@ -30,9 +30,30 @@ body {
   color: var(--color-foreground);
 }
 
-:focus-visible {
-  outline: 2px solid var(--color-foreground);
-  outline-offset: 3px;
+html.ink-cursor,
+html.ink-cursor * {
+  cursor: none !important;
+}
+
+.ink-cursor-layer,
+.ink-cursor-layer:popover-open {
+  position: fixed;
+  inset: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  pointer-events: none;
+}
+
+.ink-cursor-layer::backdrop {
+  display: none;
+  pointer-events: none;
 }
 
 @keyframes fade-in {

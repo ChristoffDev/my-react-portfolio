@@ -2,7 +2,7 @@ import profileImg from "../../assets/profile-img.png";
 
 function Hero() {
     return (
-        <section className="flex h-[calc(100svh-5rem)] flex-col overflow-hidden px-6 py-6 md:px-10 md:py-8">
+        <section aria-label="Introduction" className="flex h-[calc(100svh-5rem)] flex-col overflow-hidden px-6 py-6 md:px-10 md:py-8">
             <div className="mx-auto flex h-full min-h-0 w-full max-w-6xl flex-col">
 
                 <div className="grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] gap-6 lg:grid-cols-[1fr_0.85fr] lg:grid-rows-none lg:gap-12 xl:gap-16">

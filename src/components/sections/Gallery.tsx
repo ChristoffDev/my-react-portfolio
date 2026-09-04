@@ -51,6 +51,8 @@ function Gallery() {
                 <img
                     src={cover.src}
                     alt={cover.caption}
+                    loading="lazy"
+                    decoding="async"
                     className="aspect-[4/3] w-full object-cover object-center grayscale"
                 />
                 <button
@@ -58,6 +60,7 @@ function Gallery() {
                     onClick={play}
                     aria-label="Play gallery"
                     aria-haspopup="dialog"
+                    data-cursor="view"
                     className="absolute inset-0 flex items-center justify-center text-background"
                 >
                     <span className="flex size-12 items-center justify-center border border-background/80 bg-foreground/50">
@@ -99,6 +102,8 @@ function Gallery() {
                         <img
                             src={current.src}
                             alt={current.caption}
+                            loading="lazy"
+                            decoding="async"
                             className="max-h-[75svh] max-w-full object-contain"
                         />
                         <p className="mt-4 text-sm text-background">{current.caption}</p>

@@ -4,13 +4,13 @@ function About() {
             <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
 
                 <div className="flex flex-col gap-6">
-                    <h2 className="text-sm font-medium tracking-[0.18em] text-muted">
+                    <p className="text-sm font-medium tracking-[0.18em] text-muted">
                         01 / ABOUT
-                    </h2>
-
-                    <p className="font-serif text-3xl leading-snug tracking-tight md:text-4xl">
-                        Keep production stable. Then make it better.
                     </p>
+
+                    <h2 className="font-serif text-3xl leading-snug tracking-tight md:text-4xl">
+                        Keep production stable. Then make it better.
+                    </h2>
                 </div>
 
                 <div className="flex flex-col gap-6">
