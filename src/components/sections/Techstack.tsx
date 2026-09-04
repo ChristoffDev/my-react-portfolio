@@ -60,32 +60,34 @@ const GROUPS: TechGroup[] = [
 
 function TechStack() {
     return (
-        <section id="stack">
-            <h2 className="text-sm font-medium tracking-[0.18em] text-muted">
-                02 / TECH STACK
-            </h2>
+        <section id="stack" className="px-6 py-20 md:px-10 md:py-24">
+            <div className="mx-auto max-w-6xl">
+                <h2 className="text-sm font-medium tracking-[0.18em] text-muted">
+                    02 / TECH STACK
+                </h2>
 
-            <div className="mt-8 space-y-8">
-                {GROUPS.map((group) => (
-                    <div key={group.title}>
-                        <h3 className="text-xs font-medium tracking-[0.16em] text-light-ink">
-                            {group.title.toUpperCase()}
-                        </h3>
-                        <ul className="mt-4 space-y-4">
-                            {group.items.map((item) => (
-                                <li key={item.name} className="flex items-start gap-3">
-                                    <TechIcon name={item.name} />
-                                    <div>
-                                        <p className="text-sm font-medium tracking-[0.12em]">
-                                            {item.name.toUpperCase()}
-                                        </p>
-                                        <p className="text-sm text-muted">{item.use}</p>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
+                <div className="mt-8 space-y-8">
+                    {GROUPS.map((group) => (
+                        <div key={group.title}>
+                            <h3 className="text-xs font-medium tracking-[0.16em] text-light-ink">
+                                {group.title.toUpperCase()}
+                            </h3>
+                            <ul className="mt-4 space-y-4">
+                                {group.items.map((item) => (
+                                    <li key={item.name} className="flex items-start gap-3">
+                                        <TechIcon name={item.name} />
+                                        <div>
+                                            <p className="text-sm font-medium tracking-[0.12em]">
+                                                {item.name.toUpperCase()}
+                                            </p>
+                                            <p className="text-sm text-muted">{item.use}</p>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );

@@ -1,4 +1,4 @@
-import { useRef, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
     getProjectBySlug,
@@ -106,6 +106,12 @@ function ProjectCaseStudy() {
     const { slug } = useParams();
     const project = slug ? getProjectBySlug(slug) : undefined;
     const number = slug ? getProjectNumber(slug) : 0;
+
+    useEffect(() => {
+        document.title = project
+            ? `${project.title} — Christopher Perez`
+            : "Page not found — Christopher Perez";
+    }, [project]);
 
     if (!project) {
         return (

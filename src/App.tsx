@@ -12,6 +12,8 @@ import Contact from "./components/sections/Contact";
 import Footer from "./components/layout/Footer";
 import ProjectCaseStudy from "./pages/ProjectCaseStudy";
 
+const HOME_TITLE = "Christopher Perez — Lead Developer";
+
 function ScrollToTop() {
     const { pathname } = useLocation();
 
@@ -37,6 +39,10 @@ function Home() {
     const { hash } = useLocation();
 
     useEffect(() => {
+        document.title = HOME_TITLE;
+    }, []);
+
+    useEffect(() => {
         if (!hash) {
             return;
         }
@@ -50,17 +56,18 @@ function Home() {
         <>
             <Hero />
             <About />
-            <div className="px-6 py-20 md:px-10 md:py-24">
-                <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.9fr_1.15fr] lg:items-start">
-                    <TechStack />
-                    <Projects />
-                </div>
-            </div>
+            <TechStack />
+            <Projects />
             <Experience />
             <div className="px-6 py-20 md:px-10 md:py-24">
-                <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.9fr_1.15fr] lg:items-start">
-                    <Gallery />
-                    <Testimonials />
+                <div className="mx-auto max-w-6xl">
+                    <h2 className="text-sm font-medium tracking-[0.18em] text-muted">
+                        05 / GALLERY & TESTIMONIALS
+                    </h2>
+                    <div className="mt-8 grid gap-16 lg:grid-cols-[0.9fr_1.15fr] lg:items-start">
+                        <Gallery />
+                        <Testimonials />
+                    </div>
                 </div>
             </div>
             <Contact />
@@ -69,6 +76,10 @@ function Home() {
 }
 
 function NotFound() {
+    useEffect(() => {
+        document.title = "Page not found — Christopher Perez";
+    }, []);
+
     return (
         <main className="px-6 py-20 md:px-10 md:py-24">
             <div className="mx-auto max-w-6xl">

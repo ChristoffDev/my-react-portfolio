@@ -47,11 +47,7 @@ function Gallery() {
 
     return (
         <section id="gallery">
-            <h2 className="text-sm font-medium tracking-[0.18em] text-muted">
-                05 / GALLERY
-            </h2>
-
-            <div className="relative mt-8 overflow-hidden border border-border">
+            <div className="relative overflow-hidden border border-border">
                 <img
                     src={cover.src}
                     alt={cover.caption}

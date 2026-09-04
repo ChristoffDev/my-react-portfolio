@@ -38,12 +38,7 @@ function Testimonials() {
 
     return (
         <section id="testimonials">
-            <div className="flex items-center justify-between gap-4">
-                <h2 className="text-sm font-medium tracking-[0.18em] text-muted">
-                    06 / TESTIMONIALS
-                </h2>
-                <p className="font-mono text-xs text-muted">{counter}</p>
-            </div>
+            <p className="text-right font-mono text-xs text-muted">{counter}</p>
 
             <blockquote
                 key={index}

@@ -7,7 +7,7 @@ function Contact() {
             <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
                 <div className="flex flex-col gap-6">
                     <h2 className="text-sm font-medium tracking-[0.18em] text-muted">
-                        07 / CONTACT
+                        06 / CONTACT
                     </h2>
                     <p className="font-serif text-3xl leading-snug tracking-tight md:text-4xl">
                         Let's work together.
