@@ -26,27 +26,38 @@ function Projects() {
                     key={index}
                     className="mt-8 grid gap-10 motion-safe:animate-[fade-in_200ms_ease-out] motion-reduce:animate-none lg:grid-cols-2 lg:items-start"
                 >
-                    <Link
-                        to={`/projects/${project.slug}`}
-                        data-cursor="view"
-                        className="overflow-hidden border border-border"
-                    >
-                        {project.images[0] ? (
-                            <img
-                                src={project.images[0].src}
-                                alt={project.images[0].alt}
-                                loading="lazy"
-                                decoding="async"
-                                className="aspect-[4/3] w-full object-cover object-top grayscale"
-                            />
-                        ) : (
-                            <div className="flex aspect-[4/3] items-center justify-center">
-                                <p className="font-mono text-xs tracking-[0.16em] text-muted">
-                                    SCREENSHOT
-                                </p>
-                            </div>
-                        )}
-                    </Link>
+                    <div>
+                        <Link
+                            to={`/projects/${project.slug}`}
+                            data-cursor="view"
+                            className="overflow-hidden border border-border"
+                        >
+                            {project.images[0] ? (
+                                <img
+                                    src={project.images[0].src}
+                                    alt={project.images[0].alt}
+                                    loading="lazy"
+                                    decoding="async"
+                                    className={
+                                        project.nda
+                                            ? "aspect-[4/3] w-full object-contain p-4 grayscale"
+                                            : "aspect-[4/3] w-full object-cover object-top grayscale"
+                                    }
+                                />
+                            ) : (
+                                <div className="flex aspect-[4/3] items-center justify-center">
+                                    <p className="font-mono text-xs tracking-[0.16em] text-muted">
+                                        SCREENSHOT
+                                    </p>
+                                </div>
+                            )}
+                        </Link>
+                        {project.nda ? (
+                            <p className="mt-3 font-mono text-xs tracking-[0.16em] text-muted">
+                                NDA · ARCHITECTURE ONLY
+                            </p>
+                        ) : null}
+                    </div>
 
                     <div>
                         <h3 className="text-2xl font-semibold tracking-tight" aria-live="polite">

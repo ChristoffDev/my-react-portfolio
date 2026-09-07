@@ -34,7 +34,7 @@ function CaseSection({
     );
 }
 
-function Screenshot({ src, alt }: ProjectImage) {
+function Screenshot({ src, alt, contain = false }: ProjectImage & { contain?: boolean }) {
     const dialogRef = useRef<HTMLDialogElement>(null);
 
     const open = () => {
@@ -60,7 +60,11 @@ function Screenshot({ src, alt }: ProjectImage) {
                     alt={alt}
                     loading="lazy"
                     decoding="async"
-                    className="aspect-[4/3] w-full object-cover object-top"
+                    className={
+                        contain
+                            ? "aspect-[4/3] w-full object-contain p-4"
+                            : "aspect-[4/3] w-full object-cover object-top"
+                    }
                 />
             </button>
 
@@ -168,7 +172,16 @@ function ProjectCaseStudy() {
                 ) : null}
 
                 <div className="mt-12 max-w-xl">
-                    {hero ? <Screenshot src={hero.src} alt={hero.alt} /> : <ScreenshotFrame />}
+                    {hero ? (
+                        <Screenshot src={hero.src} alt={hero.alt} contain={project.nda} />
+                    ) : (
+                        <ScreenshotFrame />
+                    )}
+                    {project.nda ? (
+                        <p className="mt-3 font-mono text-xs tracking-[0.16em] text-muted">
+                            Product UI withheld under NDA.
+                        </p>
+                    ) : null}
                 </div>
 
                 <CaseSection label="PROJECT CONTEXT">

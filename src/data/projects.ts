@@ -1,12 +1,4 @@
-import ofdpInbox from "../assets/projects/ofdp/ofdp-developer-inbox.png";
-import ofdpDeveloperLogin from "../assets/projects/ofdp/ofdp-developer-login.png";
-import ofdpClientLogin from "../assets/projects/ofdp/ofdp-client-login.png";
-import ofdpClientDashboard from "../assets/projects/ofdp/ofdp-client-dashboard.png";
 import ofdpWorkflow from "../assets/projects/ofdp/before-vs-after-workflow.png";
-import fdpDashboard from "../assets/projects/forms-datapoint/fdp-dashboard.png";
-import fdpDeveloperLogin from "../assets/projects/forms-datapoint/fdp-developer-login.png";
-import fdpStandaloneLogin from "../assets/projects/forms-datapoint/fdp-standalone-login.png";
-import fdpSubmissionViewer from "../assets/projects/forms-datapoint/fdp-submission-viewer.png";
 import fdpArchitecture from "../assets/projects/forms-datapoint/fdp-architecture.png";
 import portfolioHome from "../assets/projects/react-portfolio/home-portfolio.png";
 
@@ -32,6 +24,7 @@ export interface Project {
     contributions: string[];
     notes: string[];
     images: ProjectImage[];
+    nda?: boolean;
 }
 
 export const PROJECTS: Project[] = [
@@ -54,6 +47,7 @@ export const PROJECTS: Project[] = [
             "WordPress",
         ],
         tools: ["Cursor AI", "phpMyAdmin"],
+        nda: true,
         context:
             "Internal forms management system used to collect, store, and manage form submissions from production websites.",
         overview:
@@ -70,26 +64,11 @@ export const PROJECTS: Project[] = [
             "Resolved compatibility issues for newer PHP versions.",
         ],
         notes: [
+            "Product screenshots are withheld under NDA. The diagram below describes the architecture.",
             "This project involved enhancing an existing legacy CodeIgniter application that I did not originally develop. I used Cursor AI as a development assistant to better understand unfamiliar modules, explore implementation approaches, accelerate debugging, and validate ideas before integrating them into the application. I was responsible for implementing, testing, validating, and integrating the final solution into the production system.",
             "Working on this project strengthened my ability to understand legacy codebases, work within existing architectures, and deliver new features while maintaining production stability.",
         ],
         images: [
-            {
-                src: ofdpInbox,
-                alt: "Developer inbox in the Online Forms Database Panel",
-            },
-            {
-                src: ofdpDeveloperLogin,
-                alt: "Developer login screen",
-            },
-            {
-                src: ofdpClientLogin,
-                alt: "Client login screen",
-            },
-            {
-                src: ofdpClientDashboard,
-                alt: "Client dashboard",
-            },
             {
                 src: ofdpWorkflow,
                 alt: "Before and after workflow for developer and client paths",
@@ -106,6 +85,7 @@ export const PROJECTS: Project[] = [
         technologies: ["Laravel", "Vue.js", "PHP", "MySQL"],
         stack: ["Laravel", "Vue.js", "PHP", "MySQL"],
         tools: [],
+        nda: true,
         context:
             "A Laravel and Vue forms management platform originally built as a multi-tenant product for more than one client on a shared instance.",
         overview:
@@ -121,25 +101,10 @@ export const PROJECTS: Project[] = [
             "Submission viewing for a single install.",
         ],
         notes: [
+            "Product screenshots are withheld under NDA. The diagram below describes the architecture.",
             "This work stayed inside an existing Laravel and Vue architecture. The job was to change how the application is scoped and deployed, not to replace the product.",
         ],
         images: [
-            {
-                src: fdpDashboard,
-                alt: "Forms DataPoint dashboard",
-            },
-            {
-                src: fdpDeveloperLogin,
-                alt: "Developer login",
-            },
-            {
-                src: fdpStandaloneLogin,
-                alt: "Standalone client login",
-            },
-            {
-                src: fdpSubmissionViewer,
-                alt: "Submission viewer",
-            },
             {
                 src: fdpArchitecture,
                 alt: "Standalone architecture overview",
