@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PROJECTS } from "../../data/projects";
+import ProjectPoster from "../ui/ProjectPoster";
 
 function Projects() {
     const [index, setIndex] = useState(0);
@@ -32,7 +33,9 @@ function Projects() {
                             data-cursor="view"
                             className="overflow-hidden border border-border"
                         >
-                            {project.images[0] ? (
+                            {project.poster ? (
+                                <ProjectPoster poster={project.poster} />
+                            ) : project.images[0] ? (
                                 <img
                                     src={project.images[0].src}
                                     alt={project.images[0].alt}
@@ -54,7 +57,7 @@ function Projects() {
                         </Link>
                         {project.nda ? (
                             <p className="mt-3 font-mono text-xs tracking-[0.16em] text-muted">
-                                NDA · ARCHITECTURE ONLY
+                                {project.ndaLabel ?? "NDA · ARCHITECTURE ONLY"}
                             </p>
                         ) : null}
                     </div>

@@ -9,6 +9,13 @@ export interface ProjectImage {
     alt: string;
 }
 
+export interface ProjectPoster {
+    title: string;
+    subtitle: string;
+    stack: string;
+    status: string;
+}
+
 export interface Project {
     slug: string;
     title: string;
@@ -28,6 +35,9 @@ export interface Project {
     notes: string[];
     images: ProjectImage[];
     nda?: boolean;
+    ndaLabel?: string;
+    ongoing?: boolean;
+    poster?: ProjectPoster;
 }
 
 export const PROJECTS: Project[] = [
@@ -191,6 +201,41 @@ export const PROJECTS: Project[] = [
                 alt: "Birthday cake with lit candles and a make-a-wish prompt",
             },
         ],
+    },
+    {
+        slug: "formsflow",
+        title: "FormsFlow",
+        subtitle: "Professional Project · Ongoing",
+        lede: "A forms management platform developed to simplify form configuration, data management, and deployment across client websites.",
+        description:
+            "A forms management platform developed to simplify form configuration, data management, and deployment across client websites.",
+        technologies: ["Laravel", "Vue.js", "PHP", "MySQL"],
+        stack: ["Laravel", "Vue.js", "PHP", "MySQL"],
+        tools: [],
+        ongoing: true,
+        poster: {
+            title: "FORMSFLOW",
+            subtitle: "Forms Management Platform",
+            stack: "Laravel · Vue · PHP · MySQL",
+            status: "ONGOING · PROFESSIONAL PROJECT",
+        },
+        context:
+            "A forms management platform for configuring forms, managing collected data, and deploying them to client websites.",
+        overview:
+            "I am implementing and improving the forms management workflow with Laravel and Vue. The work is in progress, so this page describes current effort rather than a finished product.",
+        businessProblem:
+            "Client websites need a practical way to configure forms, manage the data they collect, and deploy those forms without treating each site as a one-off.",
+        impact: "",
+        contributions: [
+            "Implementing and improving the forms management workflow",
+            "Working with Laravel and Vue",
+            "Developing backend APIs and frontend functionality",
+            "Improving deployment and client-site configuration",
+        ],
+        notes: [
+            "Due to the confidential nature of the project, system screenshots and architecture details are not shown. This case study focuses on my role, technical contributions, and development experience.",
+        ],
+        images: [],
     },
     {
         slug: "bohol-maranatha-christian-academy-portal",

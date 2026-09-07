@@ -5,6 +5,7 @@ import {
     getProjectNumber,
     type ProjectImage,
 } from "../data/projects";
+import ProjectPoster from "../components/ui/ProjectPoster";
 
 function BackLink({ className = "" }: { className?: string }) {
     return (
@@ -195,7 +196,11 @@ function ProjectCaseStudy() {
                 ) : null}
 
                 <div className="mt-12 max-w-xl">
-                    {hero ? (
+                    {project.poster ? (
+                        <div className="overflow-hidden border border-border">
+                            <ProjectPoster poster={project.poster} />
+                        </div>
+                    ) : hero ? (
                         <Screenshot src={hero.src} alt={hero.alt} contain={project.nda} />
                     ) : (
                         <ScreenshotFrame />
@@ -221,9 +226,18 @@ function ProjectCaseStudy() {
                     </p>
                 </CaseSection>
 
-                <CaseSection label="IMPACT">
-                    <p className="text-lg leading-relaxed text-muted">{project.impact}</p>
-                </CaseSection>
+                {project.ongoing ? (
+                    <CaseSection label="PROJECT STATUS">
+                        <p className="text-lg leading-relaxed text-muted">
+                            Ongoing. The platform is actively being developed and improved,
+                            so the implementation and feature set may continue to change.
+                        </p>
+                    </CaseSection>
+                ) : (
+                    <CaseSection label="IMPACT">
+                        <p className="text-lg leading-relaxed text-muted">{project.impact}</p>
+                    </CaseSection>
+                )}
 
                 {rest.length > 0 ? (
                     <div className="mt-10 grid max-w-2xl gap-4 md:grid-cols-2">
@@ -233,7 +247,7 @@ function ProjectCaseStudy() {
                     </div>
                 ) : null}
 
-                <CaseSection label="KEY CONTRIBUTIONS">
+                <CaseSection label={project.ongoing ? "CURRENT WORK" : "KEY CONTRIBUTIONS"}>
                     <ul className="list-disc space-y-2 pl-5 text-lg leading-relaxed text-muted">
                         {project.contributions.map((item) => (
                             <li key={item}>{item}</li>
