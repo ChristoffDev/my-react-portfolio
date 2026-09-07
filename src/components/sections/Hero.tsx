@@ -2,7 +2,7 @@ import profileImg from "../../assets/profile-img.png";
 
 function Hero() {
     return (
-        <section aria-label="Introduction" className="flex h-[calc(100svh-5rem)] flex-col overflow-hidden px-6 py-6 md:px-10 md:py-8">
+        <section aria-label="Introduction" className="flex flex-col px-6 py-6 md:h-[calc(100svh-5rem)] md:overflow-hidden md:px-10 md:py-8">
             <div className="mx-auto flex h-full min-h-0 w-full max-w-6xl flex-col">
 
                 <div className="grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] gap-6 lg:grid-cols-[1fr_0.85fr] lg:grid-rows-none lg:gap-12 xl:gap-16">
@@ -55,11 +55,11 @@ function Hero() {
                     </div>
 
                     {/* Profile */}
-                    <div className="relative flex h-full min-h-0 min-w-0 items-end justify-center overflow-hidden lg:justify-end">
+                    <div className="relative flex h-full min-h-[45vh] min-w-0 items-end justify-center overflow-hidden md:min-h-0 lg:justify-end">
                         <img
                             src={profileImg}
                             alt="Christopher Perez, lead developer"
-                            className="mx-auto block h-full w-auto min-h-0 max-h-full max-w-full object-contain object-bottom saturate-[.48] brightness-[1.02] lg:mx-0"
+                            className="mx-auto block h-full min-h-[45vh] w-auto max-h-full max-w-full object-contain object-bottom saturate-[.48] brightness-[1.02] md:min-h-0 lg:mx-0"
                         />
                     </div>
 
