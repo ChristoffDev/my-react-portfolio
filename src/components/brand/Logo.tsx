@@ -2,7 +2,7 @@ interface LogoProps {
     className?: string;
 }
 
-function Logo({ className = "block h-6 w-[5.75rem]" }: LogoProps) {
+function Logo({ className = "block h-6 w-[7.25rem]" }: LogoProps) {
     return (
         <svg
             className={className}

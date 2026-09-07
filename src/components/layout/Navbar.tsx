@@ -1,5 +1,5 @@
 import { useEffect, useId, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../brand/Logo";
 
 const NAV_LINKS = [
@@ -15,6 +15,7 @@ function Navbar() {
     const [activeId, setActiveId] = useState("");
     const menuId = useId();
     const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (location.pathname !== "/") {
@@ -129,7 +130,18 @@ function Navbar() {
         <header className="sticky top-0 z-50 border-b border-border bg-background">
             <nav className="mx-auto max-w-6xl px-6 py-5 md:px-10" aria-label="Primary">
                 <div className="flex items-center justify-between">
-                    <Link to="/" className="text-foreground" aria-label="Christopher Perez">
+                    <Link
+                        to="/"
+                        className="relative z-[51] inline-flex items-center py-1 text-foreground"
+                        aria-label="Christopher Perez — home"
+                        onClick={(event) => {
+                            window.scrollTo({ top: 0 });
+                            if (location.pathname === "/" && location.hash) {
+                                event.preventDefault();
+                                navigate("/");
+                            }
+                        }}
+                    >
                         <Logo />
                     </Link>
 
