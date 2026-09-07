@@ -125,6 +125,67 @@ export const PROJECTS: Project[] = [
         ],
     },
     {
+        slug: "ai-assisted-form-conversion-workflow",
+        title: "AI-Assisted Form Conversion Workflow",
+        subtitle: "Professional Project · Internal Development Initiative",
+        lede: "A structured AI-assisted workflow for faster form conversion.",
+        description:
+            "A structured AI-assisted development workflow created with fellow developers to speed up the conversion of online forms using Cursor, standardized prompts, reference files, and development guidelines.",
+        technologies: [
+            "Cursor AI",
+            "PHP",
+            "JavaScript",
+            "jQuery",
+            "HTML",
+            "CSS",
+        ],
+        stack: [
+            "Cursor AI",
+            "PHP",
+            "JavaScript",
+            "jQuery",
+            "HTML",
+            "CSS",
+        ],
+        tools: [
+            "Cursor AI",
+            "Git",
+            "Existing form development platform",
+            "Reference/sample files",
+            "Structured AI prompts",
+        ],
+        nda: true,
+        ndaLabel: "NDA · INTERNAL",
+        poster: {
+            title: "AI FORM WORKFLOW",
+            subtitle: "Internal Development Initiative",
+            stack: "Cursor · PHP · JavaScript",
+            status: "NDA · PROFESSIONAL PROJECT",
+        },
+        context:
+            "Form conversion was a repetitive development task that required significant time from developers. I collaborated with fellow developers to create a structured AI-assisted workflow using Cursor to make the conversion process faster and more efficient.",
+        overview:
+            "The workflow provides Cursor with standardized prompts, sample/reference files, and development guidelines to help developers work through the form conversion process more quickly and consistently. It gives the AI the necessary context and instructions to assist with repetitive conversion work rather than requiring developers to manually perform every step from the beginning.",
+        businessProblem:
+            "Converting online forms involved repetitive implementation work and could take a significant amount of developer time. The team wanted to reduce the time spent on repetitive conversion tasks while maintaining developer review and validation.",
+        impact:
+            "The workflow significantly reduced the time required for repetitive form conversion work, allowing developers to complete conversions more quickly and spend more time on tasks that require direct technical attention. It also provided a more structured and repeatable approach to using AI during development.",
+        contributions: [
+            "Collaborated with developers to design a structured AI-assisted form conversion workflow.",
+            "Created and refined prompts used to guide Cursor through the conversion process.",
+            "Prepared sample/reference files to provide consistent context for AI-assisted development.",
+            "Established development guidelines to help maintain consistent implementation.",
+            "Tested and refined the workflow based on actual form conversion requirements.",
+            "Helped improve the speed of repetitive form conversion work for developers.",
+            "Maintained developer review and validation as part of the conversion process.",
+        ],
+        notes: [
+            "This is an internal professional project. The actual prompts, sample files, guidelines, and internal development materials are not publicly shown due to the confidential nature of the project.",
+            "This case study focuses on the development workflow, my contributions, and the problem-solving approach rather than exposing proprietary company materials.",
+        ],
+        images: [],
+    },
+    {
         slug: "my-react-portfolio",
         title: "My React Portfolio",
         subtitle: "Component-Based Front-End Practice",

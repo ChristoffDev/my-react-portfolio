@@ -207,7 +207,9 @@ function ProjectCaseStudy() {
                     )}
                     {project.nda ? (
                         <p className="mt-3 font-mono text-xs tracking-[0.16em] text-muted">
-                            Product UI withheld under NDA.
+                            {project.poster
+                                ? "Internal materials withheld under NDA."
+                                : "Product UI withheld under NDA."}
                         </p>
                     ) : null}
                 </div>
