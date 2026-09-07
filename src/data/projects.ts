@@ -1,6 +1,8 @@
 import ofdpWorkflow from "../assets/projects/ofdp/before-vs-after-workflow.png";
 import fdpArchitecture from "../assets/projects/forms-datapoint/fdp-architecture.png";
 import portfolioHome from "../assets/projects/react-portfolio/home-portfolio.png";
+import hbdCurtain from "../assets/projects/hbd-cake/hbd-cake-screenshot-1.jpeg";
+import hbdCake from "../assets/projects/hbd-cake/hbd-cake-screenshot-2.jpeg";
 
 export interface ProjectImage {
     src: string;
@@ -17,6 +19,7 @@ export interface Project {
     stack: string[];
     tools: string[];
     link?: string;
+    repo?: string;
     context: string;
     overview: string;
     businessProblem: string;
@@ -121,7 +124,8 @@ export const PROJECTS: Project[] = [
         technologies: ["React", "TypeScript", "Tailwind CSS"],
         stack: ["React", "TypeScript", "Tailwind CSS"],
         tools: ["Cursor AI"],
-        link: "https://github.com/ChristoffDev/my-react-portfolio",
+        link: "https://christoffdev.vercel.app",
+        repo: "https://github.com/ChristoffDev/my-react-portfolio",
         context:
             "A personal site for presenting background, tools, and selected work, and for practicing component-based front-end development.",
         overview:
@@ -143,6 +147,48 @@ export const PROJECTS: Project[] = [
             {
                 src: portfolioHome,
                 alt: "Home page of the React portfolio",
+            },
+        ],
+    },
+    {
+        slug: "birthday-cake",
+        title: "Birthday Cake",
+        subtitle: "Interactive Front-End Gift",
+        lede: "A small site made as a birthday present.",
+        description:
+            "A personal React project: a curtain, a cake you can blow out, then a letter. Built and deployed as a static Vite site.",
+        technologies: ["React", "Vite", "JavaScript", "CSS"],
+        stack: ["React", "Vite", "JavaScript", "CSS"],
+        tools: [],
+        link: "https://hbd-cake-twenty-nine.vercel.app",
+        repo: "https://github.com/ChristoffDev/hbd-cake",
+        context:
+            "A birthday gift, not a product. The brief was to make something that could be opened on a phone and gone through at an unhurried pace.",
+        overview:
+            "I designed a short sequence: pull the curtain rope, tap each candle, confetti and a wish, then a letter. Copy and photos live in a config file. A looping song starts with the curtain; a mute control stays available.",
+        businessProblem:
+            "A static greeting would feel thin. The experience needed a clear beginning, middle, and end, and it had to work on a phone without instructions.",
+        impact:
+            "A live site with a complete path from opening curtain to letter, deployed as a static Vite build.",
+        contributions: [
+            "Curtain opening as the first interaction.",
+            "Candle sequence with confetti after the last flame.",
+            "Letter scene after the wish.",
+            "Config-driven copy and photos.",
+            "Audio with a mute control.",
+            "Static deploy to Vercel.",
+        ],
+        notes: [
+            "This is a personal project. Private photos from the letter are not shown here.",
+        ],
+        images: [
+            {
+                src: hbdCurtain,
+                alt: "Opening screen with closed curtains and a pull cord",
+            },
+            {
+                src: hbdCake,
+                alt: "Birthday cake with lit candles and a make-a-wish prompt",
             },
         ],
     },
