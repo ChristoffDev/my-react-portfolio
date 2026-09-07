@@ -45,7 +45,7 @@ function Contact() {
                             GitHub
                         </a>
                         <a
-                            href="/resume.pdf"
+                            href="/Christopher_Perez_General_ATS_Resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-muted transition-colors hover:text-foreground"
