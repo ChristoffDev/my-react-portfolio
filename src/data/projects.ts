@@ -258,33 +258,38 @@ export const PROJECTS: Project[] = [
     {
         slug: "birthday-cake",
         title: "Birthday Cake",
-        subtitle: "Interactive Front-End Gift",
-        lede: "A small site made as a birthday present.",
+        subtitle: "Interactive Front-End Experience",
+        lede: "A playful interactive web experience built as a personal frontend project.",
         description:
-            "A personal React project: a curtain, a cake you can blow out, then a letter. Built and deployed as a static Vite site.",
+            "A playful interactive web experience built with React and Vite, combining animations, interactive scenes, and responsive design.",
         technologies: ["React", "Vite", "JavaScript", "CSS"],
         stack: ["React", "Vite", "JavaScript", "CSS"],
-        tools: [],
-        link: "https://hbd-cake-twenty-nine.vercel.app",
-        repo: "https://github.com/ChristoffDev/hbd-cake",
+        tools: ["Git"],
+        link: "https://birthday-cake-five-jade.vercel.app",
+        repo: "https://github.com/ChristoffDev/hbd-cake-2",
         context:
-            "A birthday gift, not a product. The brief was to make something that could be opened on a phone and gone through at an unhurried pace.",
+            "An interactive birthday-themed web experience created as a frontend project to explore animations, user interactions, and responsive design.",
         overview:
-            "I designed a short sequence: pull the curtain rope, tap each candle, confetti and a wish, then a letter. Copy and photos live in a config file. A looping song starts with the curtain; a mute control stays available.",
+            "I designed and built an interactive birthday experience with a guided sequence of scenes, including a curtain opening, interactive candles, a celebration sequence, and a final message scene.",
         businessProblem:
-            "A static greeting would feel thin. The experience needed a clear beginning, middle, and end, and it had to work on a phone without instructions.",
+            "A simple static greeting would not provide the interactive experience I wanted. The project was designed around a clear sequence of interactions that could be experienced easily on both desktop and mobile devices.",
         impact:
-            "A live site with a complete path from opening curtain to letter, deployed as a static Vite build.",
+            "A complete interactive birthday experience with a guided beginning-to-end flow, responsive layout, animations, and a public demo version.",
         contributions: [
-            "Curtain opening as the first interaction.",
-            "Candle sequence with confetti after the last flame.",
-            "Letter scene after the wish.",
-            "Config-driven copy and photos.",
-            "Audio with a mute control.",
-            "Static deploy to Vercel.",
+            "Designed and implemented the interactive experience.",
+            "Built the curtain opening interaction.",
+            "Implemented the interactive candle sequence.",
+            "Added the celebration/confetti interaction.",
+            "Created the final message scene.",
+            "Structured the project using reusable React components.",
+            "Implemented responsive behavior for different screen sizes.",
+            "Prepared a sanitized public version for portfolio demonstration.",
         ],
         notes: [
-            "This is a personal project. Private photos from the letter are not shown here.",
+            "This is a personal frontend project.",
+            "The public version is a sanitized recreation of the original private project.",
+            "Personal photos and private messages from the original version are not included.",
+            "The project is intended to demonstrate frontend development, interactive UI, animation, and responsive design.",
         ],
         images: [
             {
@@ -293,7 +298,7 @@ export const PROJECTS: Project[] = [
             },
             {
                 src: hbdCake,
-                alt: "Birthday cake with lit candles and a make-a-wish prompt",
+                alt: "Birthday cake with lit candles and an interactive prompt",
             },
         ],
     },
