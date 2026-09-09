@@ -3,6 +3,12 @@ import fdpArchitecture from "../assets/projects/forms-datapoint/fdp-architecture
 import portfolioHome from "../assets/projects/react-portfolio/home-portfolio.png";
 import hbdCurtain from "../assets/projects/hbd-cake/hbd-cake-screenshot-1.jpeg";
 import hbdCake from "../assets/projects/hbd-cake/hbd-cake-screenshot-2.jpeg";
+import bmcaLogin from "../assets/projects/bmca/bmca-login.png";
+import bmcaDashboard from "../assets/projects/bmca/dashboard.png";
+import bmcaStudents from "../assets/projects/bmca/students.png";
+import bmcaTeachers from "../assets/projects/bmca/teacher.png";
+import bmcaClasses from "../assets/projects/bmca/class.png";
+import bmcaSubjects from "../assets/projects/bmca/subjects.png";
 
 export interface ProjectImage {
     src: string;
@@ -329,7 +335,32 @@ export const PROJECTS: Project[] = [
         notes: [
             "This was a capstone: a full Laravel stack from auth through CRUD, built to practice keeping school data behind a web interface.",
         ],
-        images: [],
+        images: [
+            {
+                src: bmcaLogin,
+                alt: "BMCA School Portal login screen with User ID and password fields",
+            },
+            {
+                src: bmcaDashboard,
+                alt: "Admin dashboard with student and teacher summary cards",
+            },
+            {
+                src: bmcaStudents,
+                alt: "Students list with search filters and edit and delete actions",
+            },
+            {
+                src: bmcaTeachers,
+                alt: "Teachers list with search filters and CRUD actions",
+            },
+            {
+                src: bmcaClasses,
+                alt: "Classes list with search, status, and edit and delete actions",
+            },
+            {
+                src: bmcaSubjects,
+                alt: "Subjects list with subject codes and CRUD actions",
+            },
+        ],
     },
 ];
 

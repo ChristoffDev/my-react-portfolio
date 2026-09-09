@@ -43,7 +43,12 @@ function GitHubIcon() {
     );
 }
 
-function Screenshot({ src, alt, contain = false }: ProjectImage & { contain?: boolean }) {
+function Screenshot({
+    src,
+    alt,
+    contain = false,
+    thumbnail = false,
+}: ProjectImage & { contain?: boolean; thumbnail?: boolean }) {
     const dialogRef = useRef<HTMLDialogElement>(null);
 
     const open = () => {
@@ -62,7 +67,11 @@ function Screenshot({ src, alt, contain = false }: ProjectImage & { contain?: bo
                 aria-haspopup="dialog"
                 aria-label={`View full image: ${alt}`}
                 data-cursor="view"
-                className="block w-full overflow-hidden border border-border text-left"
+                className={
+                    thumbnail
+                        ? "block w-28 overflow-hidden border border-border text-left sm:w-32"
+                        : "block w-full overflow-hidden border border-border text-left"
+                }
             >
                 <img
                     src={src}
@@ -242,9 +251,14 @@ function ProjectCaseStudy() {
                 )}
 
                 {rest.length > 0 ? (
-                    <div className="mt-10 grid max-w-2xl gap-4 md:grid-cols-2">
+                    <div className="mt-10 flex max-w-2xl flex-wrap gap-3">
                         {rest.map((image) => (
-                            <Screenshot key={image.src} src={image.src} alt={image.alt} />
+                            <Screenshot
+                                key={image.src}
+                                src={image.src}
+                                alt={image.alt}
+                                thumbnail
+                            />
                         ))}
                     </div>
                 ) : null}
