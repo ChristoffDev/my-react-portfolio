@@ -11,6 +11,8 @@ import march2024Top from "../assets/gallery/march-2024-top-performer.jpg";
 import may2025Second from "../assets/gallery/may-2025-2nd-top.jpg";
 import nov2024Top from "../assets/gallery/nov-2024-top-performer.jpg";
 import oct2024Second from "../assets/gallery/oct-2024-2nd-top-performer.jpg";
+import leadDevPromotion from "../assets/gallery/Promotion_Lead_Dev - Mr. Perez.png";
+import asvPromotion from "../assets/gallery/Promotion_ASV - Mr. Perez.png";
 import topPerformer2 from "../assets/gallery/top-performer-of-the-month-2.jpg";
 import topPerformer3 from "../assets/gallery/top-performer-of-the-month-3.jpg";
 import topPerformer from "../assets/gallery/top-performer-of-the-month.jpg";
@@ -37,4 +39,6 @@ export const GALLERY: GalleryItem[] = [
     { src: topPerformer, caption: "Top performer of the month" },
     { src: topPerformer2, caption: "Top performer of the month" },
     { src: topPerformer3, caption: "Top performer of the month" },
+    { src: leadDevPromotion, caption: "August 2025 · Lead Developer promotion" },
+    { src: asvPromotion, caption: "September 2026 · Assistant Supervisor promotion" },
 ];
