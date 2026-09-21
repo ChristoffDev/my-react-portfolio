@@ -13,7 +13,7 @@ import Footer from "./components/layout/Footer";
 import InkCursor from "./components/effects/InkCursor";
 import ProjectCaseStudy from "./pages/ProjectCaseStudy";
 
-const HOME_TITLE = "Christopher Perez — Lead Developer";
+const HOME_TITLE = "Christopher Perez — Web Developer";
 
 function ScrollToTop() {
     const { pathname } = useLocation();

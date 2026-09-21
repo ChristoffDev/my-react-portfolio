@@ -7,6 +7,12 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
     {
         quote:
+            "I've worked with Christopher for a few years now, he started as a talented developer and has naturally stepped up into a leadership role, and you can see that transition in how he handles everything. What stands out most is how reliable he is: when a project needs deep research or careful technical execution, he dives right in and consistently delivers results that exceeds expectations. No matter how tough the assignment is, he consistently figures it out and delivers great work either on time or early. Beyond his skills, he's a fantastic communicator and a genuinely great presence on the team.",
+        name: "Claudine Benitez",
+        role: "Supervisor — Proweaver, Inc.",
+    },
+    {
+        quote:
             "I would like to express my sincere appreciation for the opportunity to work with Christopher. From being my senior to becoming our Team Leader, he has consistently led by example with professionalism, patience, and exceptional attention to detail. His guidance, constructive feedback, and willingness to support the team have helped me grow both as a developer and as a professional. I'm grateful to be part of a team led by someone who genuinely inspires others to do their best.",
         name: "Kenrick Labuca",
         role: "Senior Web Developer — Proweaver, Inc.",

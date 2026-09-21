@@ -11,7 +11,7 @@ function Hero() {
                     <div className="flex min-h-0 flex-col gap-4 md:gap-6">
 
                         <p className="text-sm font-medium tracking-[0.18em] text-muted">
-                            LEAD DEVELOPER
+                            WEB DEVELOPER
                         </p>
 
                         <div>
@@ -20,10 +20,6 @@ function Hero() {
                                 <br />
                                 Perez
                             </h1>
-
-                            <p className="mt-3 text-lg text-muted md:mt-4 md:text-xl">
-                                Web Developer
-                            </p>
                         </div>
 
                         <p className="max-w-lg text-base leading-relaxed text-muted md:text-lg">
